@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">FIrstApp</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_send">Send</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="logo">Logo</string>
+    <string name="appcensus">AppCensus</string>
+    <string name="get_started">Get Started</string>
+    <string name="we_will_scan_through_your_applications_and_determine_which_are_sending_your_information_to_others_hit_the_button_below_to_get_started">We will scan through your applications and determine which are sending your information to others. Hit the button below to get started</string>
+    <string name="welcome_to_appcensus">Welcome to AppCensus</string>
+    <string name="todo">TODO</string>
+</resources>
