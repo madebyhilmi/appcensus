@@ -1,12 +1,50 @@
 <resources>
-    <string name="app_name">FIrstApp</string>
-    <string name="edit_message">Enter a message</string>
-    <string name="button_send">Send</string>
-    <string name="title_activity_splash">SplashActivity</string>
-    <string name="logo">Logo</string>
-    <string name="appcensus">AppCensus</string>
+    <string name="app_name">AppCensus</string>
+    <string name="app_one_json">{ \"name\": \"Twitter\", \"url\": \"twitter.com\", \"description\": \"Twitter is a
+        really bad application. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Commodo sed egestas egestas fringilla phasellus faucibus
+        scelerisque eleifend. Justo nec ultrices dui sapien eget. Mus mauris vitae ultricies leo integer. Porttitor leo
+        a diam sollicitudin tempor id eu nisl. Facilisis volutpat est velit egestas dui id ornare arcu. Nunc pulvinar
+        sapien et ligula ullamcorper malesuada proin libero. Mauris ultrices eros in cursus turpis massa tincidunt. Orci
+        porta non pulvinar neque laoreet. Dictum non consectetur a erat nam. Elementum sagittis vitae et leo duis ut
+        diam. Malesuada pellentesque elit eget gravida cum sociis. At erat pellentesque adipiscing commodo elit at
+        imperdiet dui accumsan. Lectus quam id leo in vitaeturpis massa sed. Non consectetur a erat nam at lectus urna
+        duis. Lacus suspendisse faucibus interdum posuere. Ornare suspendisse sed nisi lacus sed viverra tellus. Duis at
+        consectetur lorem donec massa sapien. Eu volutpat odio facilisis mauris. Rhoncus aenean vel elit scelerisque.\",
+        \"resources\": [ \"Location\", \"Camera\", \"Accounts\", \"Contacts\" ], \"transmitted\": [ \"Location\",
+        \"Advertising ID\", \"Android ID\", \"Device\"] }
+    </string>
+    <string name="app_two_json">{ \"name\": \"Booksy\", \"url\": \"booksy.com\", \"description\": \"Booksy is a really
+        bad application. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend.
+        Justo nec ultrices dui sapien eget. Mus mauris vitae ultricies leo integer. Porttitor leo a diam sollicitudin
+        tempor id eu nisl. Facilisis volutpat est velit egestas dui id ornare arcu. Nunc pulvinar sapien et ligula
+        ullamcorper malesuada proin libero. Mauris ultrices eros in cursus turpis massa tincidunt. Orci porta non
+        pulvinar neque laoreet. Dictum non consectetur a erat nam. Elementum sagittis vitae et leo duis ut diam.
+        Malesuada pellentesque elit eget gravida cum sociis. At erat pellentesque adipiscing commodo elit at imperdiet
+        dui accumsan. Lectus quam id leo in vitaeturpis massa sed. Non consectetur a erat nam at lectus urna duis. Lacus
+        suspendisse faucibus interdum posuere. Ornare suspendisse sed nisi lacus sed viverra tellus. Duis at consectetur
+        lorem donec massa sapien. Eu volutpat odio facilisis mauris. Rhoncus aenean vel elit scelerisque.\",
+        \"resources\": [ \"Location\", \"Camera\", \"Accounts\", \"Contacts\" ], \"transmitted\": [ \"Location\",
+        \"Advertising ID\", \"Android ID\", \"Device\"] }
+    </string>
+    <string name="app_three_json">{ \"name\": \"Facebook\", \"url\": \"facebook.com\", \"description\": \"Facebook is a
+        great application. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend.
+        Justo nec ultrices dui sapien eget. Mus mauris vitae ultricies leo integer. Porttitor leo a diam sollicitudin
+        tempor id eu nisl. Facilisis volutpat est velit egestas dui id ornare arcu. Nunc pulvinar sapien et ligula
+        ullamcorper malesuada proin libero. Mauris ultrices eros in cursus turpis massa tincidunt. Orci porta non
+        pulvinar neque laoreet. Dictum non consectetur a erat nam. Elementum sagittis vitae et leo duis ut diam.
+        Malesuada pellentesque elit eget gravida cum sociis. At erat pellentesque adipiscing commodo elit at imperdiet
+        dui accumsan. Lectus quam id leo in vitaeturpis massa sed. Non consectetur a erat nam at lectus urna duis. Lacus
+        suspendisse faucibus interdum posuere. Ornare suspendisse sed nisi lacus sed viverra tellus. Duis at consectetur
+        lorem donec massa sapien. Eu volutpat odio facilisis mauris. Rhoncus aenean vel elit scelerisque.\",
+        \"resources\": [ \"Location\", \"Camera\", \"Accounts\", \"Contacts\" ], \"transmitted\": [ \"Location\",
+        \"Advertising ID\", \"Android ID\", \"Device\"] }
+    </string>
+    <string name="welcome_start">Welcome to AppCensus</string>
+    <string name="message_start">We will scan through your applications and determine which are sending your information
+        to others. Hit the button below to get started.
+    </string>
     <string name="get_started">Get Started</string>
-    <string name="we_will_scan_through_your_applications_and_determine_which_are_sending_your_information_to_others_hit_the_button_below_to_get_started">We will scan through your applications and determine which are sending your information to others. Hit the button below to get started</string>
-    <string name="welcome_to_appcensus">Welcome to AppCensus</string>
-    <string name="todo">TODO</string>
 </resources>

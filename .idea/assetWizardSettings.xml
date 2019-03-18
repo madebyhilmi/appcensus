@@ -45,8 +45,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="$PROJECT_DIR$/../AppCensus/icon/xxxhdpi/Logo.png" />
-                                      <entry key="outputName" value="icon-blue" />
+                                      <entry key="imageAsset" value="C:\Users\Hilmi\StudioProjects\AppCensus-Kotlin\icon\icon-white.png" />
+                                      <entry key="outputName" value="splash_icon" />
                                       <entry key="theme" value="HOLO_DARK" />
                                       <entry key="themeColor" value="ffffff" />
                                     </map>
@@ -65,11 +65,19 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
+                                                <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
                                           </PersistentState>
                                         </value>
                                       </entry>
+                                    </map>
+                                  </option>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="backgroundAssetType" value="COLOR" />
+                                      <entry key="backgroundColor" value="4cb3e1" />
+                                      <entry key="foregroundImage" value="C:\Users\Hilmi\StudioProjects\AppCensus-Kotlin\icon\icon-white.png" />
                                     </map>
                                   </option>
                                 </PersistentState>
