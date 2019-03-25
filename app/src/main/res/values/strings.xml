@@ -47,4 +47,8 @@
         to others. Hit the button below to get started.
     </string>
     <string name="get_started">Get Started</string>
+
+    <string name="title_activity_overview">OverviewActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

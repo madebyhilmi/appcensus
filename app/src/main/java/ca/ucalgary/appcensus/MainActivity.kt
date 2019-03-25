@@ -1,9 +1,15 @@
 package ca.ucalgary.appcensus
 
+import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.constraint.ConstraintSet
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.widget.LinearLayout
+import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_app.*
+import kotlinx.android.synthetic.main.activity_app.view.*
 import kotlinx.android.synthetic.main.activity_main.*
 import org.json.JSONObject
 import java.util.ArrayList
@@ -60,4 +66,5 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
+
 }

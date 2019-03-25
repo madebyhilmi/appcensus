@@ -21,17 +21,8 @@ class StartActivity : AppCompatActivity() {
 
     fun toMainActivity(view: View){
 
-        val pm = packageManager
-        //get a list of installed apps.
-        val packages = pm.getInstalledApplications(PackageManager.GET_META_DATA)
 
-        for (packageInfo in packages) {
-            Log.d("PM:", "Installed package :" + packageInfo.packageName)
-            Log.d("PM:", "Source dir : " + packageInfo.sourceDir)
-        }
-
-
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, OverviewActivity::class.java)
         startActivity(intent)
     }
 }

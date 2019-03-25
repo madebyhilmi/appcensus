@@ -17,6 +17,7 @@ class AppActivity : AppCompatActivity() {
         appDescription?.text = selectedApp?.description
         appName?.text = selectedApp?.name
 
+
     }
 
     companion object {

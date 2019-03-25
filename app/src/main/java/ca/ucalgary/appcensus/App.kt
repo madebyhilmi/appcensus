@@ -1,18 +1,24 @@
 package ca.ucalgary.appcensus
 
+import android.graphics.drawable.Drawable
 import org.json.JSONException
 import org.json.JSONObject
+import java.io.FileDescriptor
 import java.io.Serializable
 
-class App(appJSON: JSONObject) : Serializable {
+class App() : Serializable {
     lateinit var  name: String
         private set
     lateinit var url: String
         private set
     lateinit var description: String
         private set
+    lateinit var image: Drawable
+        private set
+    lateinit var packageName: String
+        private set
 
-    init {
+    constructor(appJSON: JSONObject): this() {
         try{
             name        = appJSON.getString(APP_NAME)
             url         = appJSON.getString(APP_URL)
@@ -20,6 +26,15 @@ class App(appJSON: JSONObject) : Serializable {
         }catch (e: JSONException){
             e.printStackTrace()
         }
+    }
+
+    constructor(name: String, packageName: String, image: Drawable): this() {
+        this.name = name
+        this.packageName = packageName
+        this.image = image
+
+        this.description = "This is a test description"
+        this.url = "fakeurl.com"
     }
 
 
