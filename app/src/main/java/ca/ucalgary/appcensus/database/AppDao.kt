@@ -22,4 +22,10 @@ interface AppDao {
 
     @Delete
     fun delete(app: App)
+
+    @Query("SELECT * FROM app_list WHERE package_name = :appName")
+    fun getApp(appName: String): App
+
+    @Query("SELECT COUNT(*) FROM app_list")
+    fun getCount(): Int
 }

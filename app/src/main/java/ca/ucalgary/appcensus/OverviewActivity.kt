@@ -1,11 +1,13 @@
 package ca.ucalgary.appcensus
 
+import android.content.Context
+import ca.ucalgary.appcensus.database.AppMasterApplication
+import ca.ucalgary.appcensus.database.App as AppDB
+
 import android.content.Intent
-import android.content.pm.ApplicationInfo
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import ca.ucalgary.appcensus.database.AppDatabase
-import ca.ucalgary.appcensus.database.AppMasterApplication
+
 import com.anychart.AnyChart
 import com.anychart.AnyChartView
 import com.anychart.chart.common.dataentry.DataEntry
@@ -16,26 +18,45 @@ import com.anychart.enums.Align
 import com.anychart.enums.LegendLayout
 
 
+
 class OverviewActivity : AppCompatActivity() {
 
-    var apps: ArrayList<App> = ArrayList()
-    private lateinit var appDatabase: AppDatabase
+    companion object {
+        lateinit var appMasterApplication: AppMasterApplication
+        lateinit var apps: ArrayList<App>
+        lateinit var appInformation: List<AppDB>
+
+        fun start(context: Context, application: AppMasterApplication, iApps: ArrayList<App>, information: List<AppDB>){
+            appMasterApplication = application
+            apps = iApps
+            appInformation = information
+            val intent = Intent(context, OverviewActivity::class.java)
+            context.startActivity(intent)
+        }
+    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_overview)
-
-        //Load Database
-        loadDB()
-
-
-        //Load Installed Apps
-        getInstalledPackages()
-
+        classifyApps()
 
         //Draw Pie Chart
         drawPieChart()
+        print(apps.size)
+        print(appInformation.size)
+
+    }
+
+    private fun classifyApps(){
+        val appClassification = HashMap<App, AppDB>()
+        for (app in apps){
+            val information = appInformation.filter { it.package_name == app.packageName}
+            if (information.isNotEmpty()){
+                appClassification[app] = information[0]
+            }
+        }
+
     }
 
     private fun drawPieChart(){
@@ -59,7 +80,7 @@ class OverviewActivity : AppCompatActivity() {
 
         pie.data(data)
 
-        pie.title("Application Sketchiness")
+        pie.title("Application Sketchiness (Currently using " + appInformation.size + " applications to protect you)")
 
 
         pie.legend()
@@ -71,31 +92,4 @@ class OverviewActivity : AppCompatActivity() {
         anyChartView.setChart(pie)
     }
 
-    private fun getInstalledPackages(){
-        val pm = packageManager
-        //get a list of installed apps.
-        val packages = pm.getInstalledApplications(0)
-        val itAppInfo = packages.iterator()
-        while (itAppInfo.hasNext()){
-            val appInfo = itAppInfo.next()
-            if (!isSystemPackage(appInfo)){
-                val name = pm.getApplicationLabel(appInfo).toString()
-                val packageName = appInfo.packageName
-                val picture = pm.getApplicationIcon(appInfo)
-
-                apps.add(App(name, packageName, picture))
-            }
-
-        }
-    }
-
-    private fun isSystemPackage(appInfo: ApplicationInfo): Boolean {
-        return appInfo.flags and ApplicationInfo.FLAG_SYSTEM != 0
-    }
-
-    private fun loadDB(){
-        appDatabase = AppMasterApplication.database!!
-
-
-    }
 }
