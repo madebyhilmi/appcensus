@@ -12,7 +12,7 @@ data class App(
     @ColumnInfo(name = "geo") var geo: Boolean?,
     @ColumnInfo(name = "router_ssid") var router_ssid: Boolean?,
     @ColumnInfo(name = "wifi_mac") var wifi_mac: Boolean?,
-    @ColumnInfo(name = "router_macc") var router_mac: Boolean?,
+    @ColumnInfo(name = "router_mac") var router_mac: Boolean?,
     @ColumnInfo(name = "hwid") var hwid: Boolean?,
     @ColumnInfo(name = "phone") var phone: Boolean?,
     @ColumnInfo(name = "email") var email: Boolean?,

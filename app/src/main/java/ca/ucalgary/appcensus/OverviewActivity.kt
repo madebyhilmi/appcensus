@@ -22,6 +22,7 @@ import com.anychart.enums.LegendLayout
 class OverviewActivity : AppCompatActivity() {
 
     companion object {
+        lateinit var appClassification: HashMap<App, AppDB>
         lateinit var appMasterApplication: AppMasterApplication
         lateinit var apps: ArrayList<App>
         lateinit var appInformation: List<AppDB>
@@ -49,14 +50,20 @@ class OverviewActivity : AppCompatActivity() {
     }
 
     private fun classifyApps(){
-        val appClassification = HashMap<App, AppDB>()
+        //Add Applications to Dictionary (prep for classification)
+        appClassification = HashMap()
         for (app in apps){
             val information = appInformation.filter { it.package_name == app.packageName}
             if (information.isNotEmpty()){
+                //Classify
+                when {
+                    information[0].geo!! or information[0].router_mac!! or information[0].real_name!! -> app.classification = App.HIGH_RISK
+                    information[0].router_ssid!! or information[0].email!! or information[0].hwid!! -> app.classification = App.LOW_RISK
+                    else -> app.classification = App.NO_RISK
+                }
                 appClassification[app] = information[0]
             }
         }
-
     }
 
     private fun drawPieChart(){
@@ -67,8 +74,7 @@ class OverviewActivity : AppCompatActivity() {
 
         pie.setOnClickListener(object : ListenersInterface.OnClickListener(arrayOf("x", "value")) {
             override fun onClick(event: Event) {
-                val intent = Intent(this@OverviewActivity, MainActivity::class.java)
-                startActivity(intent)
+                MainActivity.start(this@OverviewActivity, appClassification)
             }
         })
 

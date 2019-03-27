@@ -1,18 +1,14 @@
 package ca.ucalgary.appcensus
 
-import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
+
+import ca.ucalgary.appcensus.database.App as AppDB
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
-import androidx.constraintlayout.widget.ConstraintSet
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import android.widget.LinearLayout
-import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_app.*
-import kotlinx.android.synthetic.main.activity_app.view.*
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import org.json.JSONObject
-import java.util.ArrayList
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var adapter: RiskAdapter
@@ -20,6 +16,17 @@ class MainActivity : AppCompatActivity() {
     private var appsList: ArrayList<App> = ArrayList()
     private val lastVisibleItemPosition: Int
         get() = linearLayoutManager.findLastVisibleItemPosition()
+
+    companion object {
+        lateinit var appClassification: HashMap<App, ca.ucalgary.appcensus.database.App>
+
+
+        fun start(context: Context, classification: HashMap<App, AppDB>){
+            appClassification = classification
+            val intent = Intent(context, MainActivity::class.java)
+            context.startActivity(intent)
+        }
+    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
