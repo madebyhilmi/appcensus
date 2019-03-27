@@ -1,11 +1,11 @@
 package ca.ucalgary.appcensus
 
 import android.graphics.Color
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.constraint.ConstraintSet
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.constraintlayout.widget.ConstraintSet
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import android.widget.LinearLayout
 import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_app.*
@@ -16,7 +16,7 @@ import java.util.ArrayList
 
 class MainActivity : AppCompatActivity() {
     private lateinit var adapter: RiskAdapter
-    private lateinit var linearLayoutManager: LinearLayoutManager
+    private lateinit var linearLayoutManager: androidx.recyclerview.widget.LinearLayoutManager
     private var appsList: ArrayList<App> = ArrayList()
     private val lastVisibleItemPosition: Int
         get() = linearLayoutManager.findLastVisibleItemPosition()
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        linearLayoutManager = LinearLayoutManager(this)
+        linearLayoutManager = androidx.recyclerview.widget.LinearLayoutManager(this)
         recyclerView.layoutManager = linearLayoutManager
         adapter = RiskAdapter(appsList)
         recyclerView.adapter = adapter
@@ -59,8 +59,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setRecyclerViewScrollListener() {
-        recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+        recyclerView.addOnScrollListener(object : androidx.recyclerview.widget.RecyclerView.OnScrollListener() {
+            override fun onScrollStateChanged(recyclerView: androidx.recyclerview.widget.RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
                 createSamplePhotos()
             }

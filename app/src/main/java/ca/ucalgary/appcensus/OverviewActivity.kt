@@ -1,38 +1,33 @@
 package ca.ucalgary.appcensus
 
-import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
-
-import com.anychart.AnyChart;
-import com.anychart.AnyChartView;
-import com.anychart.chart.common.dataentry.DataEntry;
-import com.anychart.chart.common.dataentry.ValueDataEntry;
-import com.anychart.chart.common.listener.Event;
-import com.anychart.chart.common.listener.ListenersInterface;
-import com.anychart.charts.Pie;
-import com.anychart.enums.Align;
-import com.anychart.enums.LegendLayout;
-import android.R.attr.data
-import android.app.Application
 import android.content.Intent
 import android.content.pm.ApplicationInfo
-import android.content.pm.PackageManager
-import android.util.Log
-import android.widget.Toast
-import android.content.pm.PackageInfo
-
-
-
-
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import ca.ucalgary.appcensus.database.AppDatabase
+import ca.ucalgary.appcensus.database.AppMasterApplication
+import com.anychart.AnyChart
+import com.anychart.AnyChartView
+import com.anychart.chart.common.dataentry.DataEntry
+import com.anychart.chart.common.dataentry.ValueDataEntry
+import com.anychart.chart.common.listener.Event
+import com.anychart.chart.common.listener.ListenersInterface
+import com.anychart.enums.Align
+import com.anychart.enums.LegendLayout
 
 
 class OverviewActivity : AppCompatActivity() {
 
     var apps: ArrayList<App> = ArrayList()
+    private lateinit var appDatabase: AppDatabase
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_overview)
+
+        //Load Database
+        loadDB()
 
 
         //Load Installed Apps
@@ -96,5 +91,11 @@ class OverviewActivity : AppCompatActivity() {
 
     private fun isSystemPackage(appInfo: ApplicationInfo): Boolean {
         return appInfo.flags and ApplicationInfo.FLAG_SYSTEM != 0
+    }
+
+    private fun loadDB(){
+        appDatabase = AppMasterApplication.database!!
+
+
     }
 }

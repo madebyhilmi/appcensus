@@ -1,7 +1,7 @@
 package ca.ucalgary.appcensus
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_app.*
 
 class AppActivity : AppCompatActivity() {

@@ -2,7 +2,7 @@ package ca.ucalgary.appcensus
 
 import android.content.Intent
 import android.graphics.Color
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
@@ -10,7 +10,7 @@ import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_app.view.*
 import kotlinx.android.synthetic.main.risk_item_row.view.*
 
-class RiskAdapter(private val apps: ArrayList<App>) : RecyclerView.Adapter<RiskAdapter.AppHolder>() {
+class RiskAdapter(private val apps: ArrayList<App>) : androidx.recyclerview.widget.RecyclerView.Adapter<RiskAdapter.AppHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RiskAdapter.AppHolder {
         val inflatedView = parent.inflate(R.layout.risk_item_row, false)
@@ -25,7 +25,7 @@ class RiskAdapter(private val apps: ArrayList<App>) : RecyclerView.Adapter<RiskA
     }
 
 
-    class AppHolder(v: View) : RecyclerView.ViewHolder(v), View.OnClickListener {
+    class AppHolder(v: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(v), View.OnClickListener {
         private var view: View = v
         private var app : App? = null
 

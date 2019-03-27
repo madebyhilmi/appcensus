@@ -3,7 +3,6 @@ package ca.ucalgary.appcensus
 import android.graphics.drawable.Drawable
 import org.json.JSONException
 import org.json.JSONObject
-import java.io.FileDescriptor
 import java.io.Serializable
 
 class App() : Serializable {
@@ -43,4 +42,6 @@ class App() : Serializable {
         private val APP_DESCRIPTION = "description"
         private val APP_URL = "url"
     }
+
+
 }

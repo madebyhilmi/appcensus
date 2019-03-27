@@ -4,7 +4,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/linearLayout">
@@ -49,6 +49,6 @@
                 android:layout_height="wrap_content" android:id="@+id/textView"
                 tools:layout_editor_absoluteX="16dp" app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_marginBottom="8dp"/>
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
