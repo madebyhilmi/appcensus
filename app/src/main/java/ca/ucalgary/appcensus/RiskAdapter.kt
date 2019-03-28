@@ -8,6 +8,7 @@ import android.graphics.Color
 import androidx.recyclerview.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_app.view.*
@@ -64,6 +65,9 @@ class RiskAdapter(private val apps: List<App>, private val appWithInformation: H
         }
         fun bindApp(app: App, information: AppDB?){
             this.app = app
+            val rowAppImage: ImageView = view.findViewById(R.id.rowAppImage)
+            rowAppImage.background = app.image
+
             view.rowAppDescription.text = app.description
             view.rowAppName.text = app.name
             var counter = 0
