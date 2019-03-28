@@ -10,7 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f37d4030-b67c-4c40-9f58-b0f29c8d3566" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/sample_data.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
@@ -23,11 +22,10 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/App.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/OverviewActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/OverviewActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/database/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/database/App.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/database/AppDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/database/AppDatabase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/RiskAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/RiskAdapter.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,8 +42,8 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/app/src/main/assets/sample_data.csv">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="51">
-                    <caret line="3" column="56" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="56" />
+                  <state>
+                    <caret column="114" selection-start-column="13" selection-end-column="114" />
                   </state>
                 </provider>
               </entry>
@@ -84,9 +82,9 @@
         <counts>
           <entry key="Translations Editor" value="1" />
           <entry key="csv" value="6" />
-          <entry key="gradle" value="13" />
-          <entry key="java" value="6" />
-          <entry key="kt" value="55" />
+          <entry key="gradle" value="15" />
+          <entry key="java" value="7" />
+          <entry key="kt" value="56" />
           <entry key="properties" value="2" />
           <entry key="xml" value="22" />
         </counts>
@@ -94,9 +92,9 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="" value="1" />
-          <entry key="Groovy" value="13" />
-          <entry key="JAVA" value="6" />
-          <entry key="Kotlin" value="55" />
+          <entry key="Groovy" value="15" />
+          <entry key="JAVA" value="7" />
+          <entry key="Kotlin" value="56" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="Properties" value="2" />
           <entry key="XML" value="22" />
@@ -104,17 +102,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="gradle" value="91" />
-          <entry key="kt" value="7402" />
-          <entry key="txt" value="366" />
+          <entry key="gradle" value="108" />
+          <entry key="kt" value="8575" />
+          <entry key="txt" value="474" />
           <entry key="xml" value="107" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Groovy" value="91" />
-          <entry key="Kotlin" value="7402" />
-          <entry key="PLAIN_TEXT" value="366" />
+          <entry key="Groovy" value="108" />
+          <entry key="Kotlin" value="8575" />
+          <entry key="PLAIN_TEXT" value="474" />
           <entry key="XML" value="107" />
         </counts>
       </usages-collector>
@@ -134,14 +132,44 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="574">
+              <caret line="77" column="18" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
               <folding>
                 <element signature="e#32#284#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/RiskAdapter.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="444">
+              <caret line="69" column="56" selection-start-line="69" selection-start-column="56" selection-end-line="69" selection-end-column="56" />
+              <folding>
+                <element signature="e#32#474#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="93" selection-start-column="93" selection-end-column="93" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
@@ -2661,7 +2689,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/RiskAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_app.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/AppActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/risk_item_row.xml" />
@@ -2675,7 +2702,6 @@
         <option value="$PROJECT_DIR$/gradle.properties" />
         <option value="$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/AppMasterApplication.kt" />
         <option value="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ca/ucalgary/appcensus/database/AppDao.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/database/FileHelper.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/Extensions.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/DatabaseTask.kt" />
@@ -2690,13 +2716,15 @@
         <option value="$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/database/App.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/OverviewActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/database/AppDatabase.kt" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/MainActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/RiskAdapter.kt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-11" />
-    <option name="width" value="1940" />
+    <option name="width" value="2312" />
     <option name="height" value="2124" />
   </component>
   <component name="ProjectView">
@@ -2876,7 +2904,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553725989228</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Classification model is now passed to MainActivity, can start programmatically adding Apps to main screen">
+      <created>1553729700711</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1553729700711</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2889,11 +2924,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1293" height="1416" extended-state="0" />
+    <frame x="-7" y="0" width="1541" height="1416" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4988372" visible="true" weight="0.21978913" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4988372" visible="true" weight="0.18298447" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" sideWeight="0.50116277" side_tool="true" weight="0.21978913" />
@@ -2907,8 +2942,8 @@
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5004055" side_tool="true" weight="0.32969603" />
       <window_info anchor="bottom" id="Build" order="5" weight="0.21200311" />
       <window_info anchor="bottom" id="Android Profiler" order="6" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.32735777" />
-      <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.49959448" visible="true" weight="0.32969603" />
+      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.32735777" />
+      <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.49959448" weight="0.32969603" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.32969603" />
       <window_info anchor="right" id="StringPreview" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
@@ -2926,7 +2961,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added stub implementation of Room. Converted to AndroidX, using kapt" />
     <MESSAGE value="Room DB now works. Classification works. Now to apply backend changes to front end." />
-    <option name="LAST_COMMIT_MESSAGE" value="Room DB now works. Classification works. Now to apply backend changes to front end." />
+    <MESSAGE value="Classification model is now passed to MainActivity, can start programmatically adding Apps to main screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Classification model is now passed to MainActivity, can start programmatically adding Apps to main screen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2936,6 +2972,12 @@
           <line>45</line>
           <properties />
           <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/RiskAdapter.kt</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -2954,16 +2996,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/hr_rounded_corner.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/RiskAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
-          <folding>
-            <element signature="e#31#475#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/risk_item_row.xml">
       <provider editor-type-id="android-designer2" />
@@ -3053,13 +3085,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="93" selection-start-column="93" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/database/FileHelper.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -3067,13 +3092,6 @@
           <folding>
             <element signature="e#40#204#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
@@ -3149,13 +3167,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/sample_data.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="56" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/StartActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1174">
@@ -3194,12 +3205,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/sample_data.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="114" selection-start-column="13" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="93" selection-start-column="93" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.0.0-beta01/768e01b490e5478935ed23a90ea3f02a7c07e287/recyclerview-1.0.0-beta01-sources.jar!/androidx/recyclerview/widget/RecyclerView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="7178" column="26" selection-start-line="7178" selection-start-column="26" selection-end-line="7178" selection-end-column="26" />
+          <folding>
+            <element signature="e#310887#310888#0" expanded="true" />
+            <element signature="e#310959#310960#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/MainActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="574">
+          <caret line="77" column="18" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
           <folding>
             <element signature="e#32#284#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/ucalgary/appcensus/RiskAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="69" column="56" selection-start-line="69" selection-start-column="56" selection-end-line="69" selection-end-column="56" />
+          <folding>
+            <element signature="e#32#474#0" expanded="true" />
           </folding>
         </state>
       </provider>

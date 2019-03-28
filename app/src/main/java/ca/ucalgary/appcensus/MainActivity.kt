@@ -36,18 +36,18 @@ class MainActivity : AppCompatActivity() {
 
         linearLayoutManager = androidx.recyclerview.widget.LinearLayoutManager(this)
         recyclerView.layoutManager = linearLayoutManager
-        adapter = RiskAdapter(appsList)
+        adapter = RiskAdapter(appsList, appClassification)
         recyclerView.adapter = adapter
         setRecyclerViewScrollListener()
     }
     override fun onStart() {
         super.onStart()
         if (appsList.size == 0) {
-            createSamplePhotos()
+            //createSamplePhotos()
+            addApplications()
         }
     }
     private fun createSamplePhotos(){
-
         val appOne: App = App(JSONObject(getString(R.string.app_one_json)))
         appsList.add(appOne)
         val appTwo: App = App(JSONObject(getString(R.string.app_two_json)))
@@ -55,6 +55,12 @@ class MainActivity : AppCompatActivity() {
         val appThree: App = App(JSONObject(getString(R.string.app_three_json)))
         appsList.add(appThree)
 
+    }
+
+    private fun addApplications(){
+        for (app in appClassification){
+            appsList.add(app.key)
+        }
     }
 
     private fun receivedNewPhoto(newApp: App) {
@@ -69,7 +75,9 @@ class MainActivity : AppCompatActivity() {
         recyclerView.addOnScrollListener(object : androidx.recyclerview.widget.RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: androidx.recyclerview.widget.RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
-                createSamplePhotos()
+                //createSamplePhotos()
+                addApplications()
+
             }
         })
     }
