@@ -33,16 +33,19 @@ class RiskAdapter(private val apps: List<App>, private val appWithInformation: H
 
     class AppHolder(v: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(v), View.OnClickListener {
         private var view: View = v
-        private var app : App? = null
+        lateinit var app : App
+        private var appInformation: AppDB? = null
 
         init {
             v.setOnClickListener(this)
         }
 
         override fun onClick(v: View?) {
+
+            AppActivity.start(view.context, app, appInformation)
+
             val context = itemView.context
             val showAppIntent = Intent(context, AppActivity::class.java)
-            showAppIntent.putExtra(APP_KEY, app)
             context.startActivity(showAppIntent)
 
         }
@@ -63,8 +66,11 @@ class RiskAdapter(private val apps: List<App>, private val appWithInformation: H
                 "simid" to "SIM",
                 "gsfid" to "Google Services Framework ID")
         }
+
         fun bindApp(app: App, information: AppDB?){
             this.app = app
+            this.appInformation = information
+
             val rowAppImage: ImageView = view.findViewById(R.id.rowAppImage)
             rowAppImage.background = app.image
 
