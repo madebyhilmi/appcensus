@@ -82,6 +82,7 @@ class RiskAdapter(private val apps: List<App>, private val appWithInformation: H
                 when {
                     propValue and (counter == 0) -> {
                         view.rowCategoryOne.text = INFORMATION_TYPES[prop.name]
+
                         counter++
 
                     }

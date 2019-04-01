@@ -17,38 +17,122 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline" android:textSize="30sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="16dp" android:layout_marginTop="32dp"
-                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="16dp" android:layout_marginTop="16dp"
                 app:layout_constraintStart_toEndOf="@+id/appImage" android:layout_marginStart="24dp"
-                app:layout_constraintHorizontal_bias="1.0"
-        />
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar2"/>
         <ImageView
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:scaleType="fitXY"
                 android:id="@+id/appImage"
                 tools:srcCompat="@tools:sample/avatars" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="16dp" app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/toolbar2"/>
         <TextView
                 android:layout_height="wrap_content"
                 android:id="@+id/appDescription" app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="16dp" android:layout_marginTop="32dp"
                 app:layout_constraintTop_toBottomOf="@+id/appName"
-                android:layout_marginBottom="16dp"
                 android:layout_weight="1"
                 android:ellipsize="end"
                 android:maxLines="10"
                 android:layout_width="0dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2" android:lineSpacingExtra="4sp"
-                app:layout_constraintBottom_toTopOf="@+id/textView"/>
+        />
+        <androidx.appcompat.widget.Toolbar
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:theme="?attr/actionBarTheme"
+                android:minHeight="?attr/actionBarSize"
+                android:id="@+id/toolbar2"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
         <TextView
                 android:text="TextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/textView"
-                tools:layout_editor_absoluteX="16dp" app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="8dp"/>
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:background="@drawable/hr_rounded_corner"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:id="@+id/imei_transmission"
+                android:layout_marginStart="16dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/appDescription"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:background="@drawable/hr_rounded_corner"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:id="@+id/wifi_transmission"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/appDescription"
+                app:layout_constraintStart_toEndOf="@+id/imei_transmission"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:background="@drawable/hr_rounded_corner"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:id="@+id/advertising_transmission"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/appDescription"
+                app:layout_constraintStart_toEndOf="@+id/wifi_transmission"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:background="@drawable/hr_rounded_corner"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:id="@+id/android_transmission"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/imei_transmission"
+                android:layout_marginStart="16dp" app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:background="@drawable/hr_rounded_corner"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:id="@+id/location_transmission"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/wifi_transmission"
+                android:layout_marginStart="8dp" app:layout_constraintStart_toEndOf="@+id/android_transmission"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:background="@drawable/hr_rounded_corner"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:id="@+id/services_transmission"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/advertising_transmission"
+                android:layout_marginStart="8dp" app:layout_constraintStart_toEndOf="@+id/location_transmission"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:background="@drawable/hr_rounded_corner"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:id="@+id/name_transmission"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/sim_transmission"
+                android:layout_marginStart="8dp" app:layout_constraintStart_toEndOf="@+id/services_transmission"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:background="@drawable/hr_rounded_corner"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:id="@+id/sim_transmission"
+                app:layout_constraintTop_toBottomOf="@+id/appDescription"
+                android:layout_marginStart="8dp" app:layout_constraintStart_toEndOf="@+id/advertising_transmission"
+                android:layout_marginTop="8dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

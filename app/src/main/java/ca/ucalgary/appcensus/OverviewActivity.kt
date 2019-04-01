@@ -16,6 +16,9 @@ import com.anychart.chart.common.listener.Event
 import com.anychart.chart.common.listener.ListenersInterface
 import com.anychart.enums.Align
 import com.anychart.enums.LegendLayout
+import com.mikepenz.materialdrawer.DrawerBuilder
+
+
 
 
 
@@ -44,8 +47,6 @@ class OverviewActivity : AppCompatActivity() {
 
         //Draw Pie Chart
         drawPieChart()
-        print(apps.size)
-        print(appInformation.size)
 
     }
 

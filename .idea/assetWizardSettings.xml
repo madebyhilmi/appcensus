@@ -35,6 +35,8 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
+                                                <entry key="paddingPercent" value="-10" />
+                                                <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -45,9 +47,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="C:\Users\Hilmi\StudioProjects\AppCensus-Kotlin\icon\icon-white.png" />
-                                      <entry key="outputName" value="splash_icon" />
-                                      <entry key="theme" value="HOLO_DARK" />
+                                      <entry key="imageAsset" value="C:\Users\Hilmi\StudioProjects\AppCensus-Kotlin\icon\imei-badge.png" />
+                                      <entry key="outputName" value="imei_badge" />
                                       <entry key="themeColor" value="ffffff" />
                                     </map>
                                   </option>
@@ -138,6 +139,11 @@
                 </map>
               </option>
             </PersistentState>
+          </value>
+        </entry>
+        <entry key="vectorWizard">
+          <value>
+            <PersistentState />
           </value>
         </entry>
       </map>

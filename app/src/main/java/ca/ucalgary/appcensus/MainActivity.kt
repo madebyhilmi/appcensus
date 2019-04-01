@@ -4,11 +4,17 @@ package ca.ucalgary.appcensus
 import ca.ucalgary.appcensus.database.App as AppDB
 import android.content.Context
 import android.content.Intent
+import android.content.res.Resources
+import android.graphics.Color
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_main.*
 import org.json.JSONObject
 import java.util.*
+
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var adapter: RiskAdapter
@@ -33,12 +39,20 @@ class MainActivity : AppCompatActivity() {
         setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        toolbar.title = "Bad Applications"
+        toolbar.setTitleTextColor(Color.WHITE)
+        val colorValue = ContextCompat.getColor(this, R.color.colorHigh)
+        toolbar.setBackgroundColor(colorValue)
+        setSupportActionBar(toolbar)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.setDisplayShowHomeEnabled(true)
 
         linearLayoutManager = androidx.recyclerview.widget.LinearLayoutManager(this)
         recyclerView.layoutManager = linearLayoutManager
         adapter = RiskAdapter(appsList, appClassification)
         recyclerView.adapter = adapter
         setRecyclerViewScrollListener()
+
     }
     override fun onStart() {
         super.onStart()
@@ -46,6 +60,15 @@ class MainActivity : AppCompatActivity() {
             //createSamplePhotos()
             addApplications()
         }
+    }
+
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // handle arrow click here
+        if (item.itemId.equals(android.R.id.home)) {
+            finish() // close this activity and return to preview activity (if there is any)
+        }
+        return super.onOptionsItemSelected(item)
     }
     private fun createSamplePhotos(){
         val appOne: App = App(JSONObject(getString(R.string.app_one_json)))
