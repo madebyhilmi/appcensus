@@ -1,8 +1,13 @@
 <component name="libraryTable">
   <library name="Gradle: com.mikepenz:fastadapter-commons:3.3.0@aar">
     <CLASSES>
+<<<<<<< refs/remotes/origin/master
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fastadapter-commons-3.3.0.aar/780feec221e0c6b3c13c967a19f68b33/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fastadapter-commons-3.3.0.aar/780feec221e0c6b3c13c967a19f68b33/jars/classes.jar!/" />
+=======
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fastadapter-commons-3.3.0.aar/403d21b91a899c4ac71861c93d2169cb/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fastadapter-commons-3.3.0.aar/403d21b91a899c4ac71861c93d2169cb/jars/classes.jar!/" />
+>>>>>>> Added libraries
     </CLASSES>
     <JAVADOC />
     <SOURCES>

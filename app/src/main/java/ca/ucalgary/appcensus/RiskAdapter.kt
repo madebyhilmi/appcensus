@@ -98,28 +98,7 @@ class RiskAdapter(private val apps: List<App>, private val appWithInformation: H
                 }
             }
         }
-        private fun createResources(resources: java.util.ArrayList<String>){
-            for (resource: String in resources){
-                val params: LinearLayout.LayoutParams = LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.WRAP_CONTENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT)
 
-                val textView = TextView(this.view.context)
-                textView.background = this.view.context.getDrawable(R.drawable.hr_rounded_corner)
-                textView.setPadding(4,4,4,4)
-                textView.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
-                textView.text = resource
-                textView.setTextColor(Color.WHITE)
-                val id_ = textView.id
-
-                this.view.linearLayout.addView(textView)
-
-//                val constraintSet = ConstraintSet()
-//                constraintSet.clone(this.linearLayout)
-//                constraintSet.connect(id_, ConstraintSet.BOTTOM, R.id.parent, ConstraintSet.BOTTOM, 8)
-//                constraintSet.connect(id_, ConstraintSet.START, R.id.parent, ConstraintSet.START, 8)
-            }
-        }
 
     }
 

@@ -2,9 +2,12 @@ package ca.ucalgary.appcensus
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_app.*
+import kotlinx.android.synthetic.main.activity_main.*
 import ca.ucalgary.appcensus.database.App as AppDB
 
 class AppActivity : AppCompatActivity() {
@@ -28,6 +31,15 @@ class AppActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_app)
+        toolbar_app.title = selectedApp.name
+        toolbar_app.setTitleTextColor(Color.WHITE)
+        val colorValue = ContextCompat.getColor(this, R.color.colorHigh)
+        toolbar_app.setBackgroundColor(colorValue)
+        setSupportActionBar(toolbar_app)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.setDisplayShowHomeEnabled(true)
+
+
 
         //TODO: Add logic here to parse load JSON and get appropriate App
         appDescription?.text = selectedApp.description
@@ -44,19 +56,25 @@ class AppActivity : AppCompatActivity() {
         sim_transmission.text = "SIM Serial"
 
         if (appInformation != null){
-            if (!appInformation.wifi_mac!!){
+            if (!appInformation.wifi_mac!!) {
                 imei_transmission.setBackgroundResource(R.drawable.g_rounded_corner)
-            }else if (!appInformation.aid!!){
+            }
+             if (!appInformation.aid!!){
                 advertising_transmission.setBackgroundResource(R.drawable.g_rounded_corner)
-            }else if (!appInformation.aaid!!){
+            }
+            if (!appInformation.aaid!!){
                 android_transmission.setBackgroundResource(R.drawable.g_rounded_corner)
-            }else if (!appInformation.gsfid!!){
+            }
+            if (!appInformation.gsfid!!){
                 services_transmission.setBackgroundResource(R.drawable.g_rounded_corner)
-            }else if (!appInformation.sim_id!!){
+            }
+            if (!appInformation.sim_id!!){
                 sim_transmission.setBackgroundResource(R.drawable.g_rounded_corner)
-            }else if (!appInformation.geo!!){
+            }
+            if (!appInformation.geo!!){
                 location_transmission.setBackgroundResource(R.drawable.g_rounded_corner)
-            }else if (!appInformation.real_name!!){
+            }
+            if (!appInformation.real_name!!){
                 name_transmission.setBackgroundResource(R.drawable.g_rounded_corner)
             }
         }
