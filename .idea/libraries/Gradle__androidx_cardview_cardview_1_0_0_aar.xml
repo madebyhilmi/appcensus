@@ -1,13 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.cardview:cardview:1.0.0@aar">
     <CLASSES>
-<<<<<<< refs/remotes/origin/master
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/cardview-1.0.0.aar/d4315ee55fc06ac628b60d7448b31ed0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/cardview-1.0.0.aar/d4315ee55fc06ac628b60d7448b31ed0/res" />
-=======
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/cardview-1.0.0.aar/3fd78b17fab3fd48b98d7bfa93751227/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/cardview-1.0.0.aar/3fd78b17fab3fd48b98d7bfa93751227/res" />
->>>>>>> Added libraries
     </CLASSES>
     <JAVADOC />
     <SOURCES>
