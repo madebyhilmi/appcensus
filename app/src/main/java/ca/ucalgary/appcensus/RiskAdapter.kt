@@ -73,8 +73,6 @@ class RiskAdapter(private val apps: List<App>, private val appWithInformation: H
 
             val rowAppImage: ImageView = view.findViewById(R.id.rowAppImage)
             rowAppImage.background = app.image
-
-            view.rowAppDescription.text = app.description
             view.rowAppName.text = app.name
             var counter = 0
             for (prop in AppDB::class.memberProperties){
@@ -97,6 +95,10 @@ class RiskAdapter(private val apps: List<App>, private val appWithInformation: H
                     }
                 }
             }
+            val badCounter = AppDB::class.memberProperties.count { it.get(information!!).toString().toBoolean() }
+            app.description = """${app.name} has transmitted $badCounter out of ${INFORMATION_TYPES.size} identifiers"""
+            view.rowAppDescription.text = app.description
+
         }
 
 

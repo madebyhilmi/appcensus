@@ -11,7 +11,6 @@ class App() : Serializable {
     lateinit var url: String
         private set
     lateinit var description: String
-        private set
     lateinit var image: Drawable
         private set
     lateinit var packageName: String
