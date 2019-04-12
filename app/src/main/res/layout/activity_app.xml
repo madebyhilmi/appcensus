@@ -25,7 +25,7 @@
                 android:text="Similar Apps"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView"
-                app:layout_constraintTop_toBottomOf="@+id/android_transmission"
+                app:layout_constraintTop_toBottomOf="@+id/label_5"
                 app:layout_constraintStart_toStartOf="parent"
                 android:textSize="24sp" android:textStyle="bold" android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp" android:layout_width="wrap_content"/>
@@ -76,7 +76,9 @@
                 android:background="@drawable/hr_rounded_corner"
                 android:padding="4dp"
                 android:textColor="@android:color/white"
-                android:id="@+id/imei_transmission"
+                android:id="@+id/label_1"
+                android:onClick="onClick_1"
+                android:clickable="true"
                 android:layout_marginStart="16dp" app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/appDescription"/>
         <TextView
@@ -86,10 +88,12 @@
                 android:background="@drawable/hr_rounded_corner"
                 android:padding="4dp"
                 android:textColor="@android:color/white"
-                android:id="@+id/wifi_transmission"
+                android:id="@+id/label_2"
+                android:onClick="onClick_2"
+                android:clickable="true"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/appDescription"
-                app:layout_constraintStart_toEndOf="@+id/imei_transmission"/>
+                app:layout_constraintStart_toEndOf="@+id/label_1"/>
         <TextView
                 android:text="TextView"
                 android:layout_width="0dp"
@@ -97,10 +101,12 @@
                 android:background="@drawable/hr_rounded_corner"
                 android:padding="4dp"
                 android:textColor="@android:color/white"
-                android:id="@+id/advertising_transmission"
+                android:id="@+id/label_3"
+                android:onClick="onClick_3"
+                android:clickable="true"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/appDescription"
-                app:layout_constraintStart_toEndOf="@+id/wifi_transmission"/>
+                app:layout_constraintStart_toEndOf="@+id/label_2"/>
         <TextView
                 android:text="TextView"
                 android:layout_width="0dp"
@@ -108,8 +114,10 @@
                 android:background="@drawable/hr_rounded_corner"
                 android:padding="4dp"
                 android:textColor="@android:color/white"
-                android:id="@+id/android_transmission"
-                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/imei_transmission"
+                android:id="@+id/label_5"
+                android:onClick="onClick_5"
+                android:clickable="true"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/label_1"
                 android:layout_marginStart="16dp" app:layout_constraintStart_toStartOf="parent"/>
         <TextView
                 android:text="TextView"
@@ -118,9 +126,11 @@
                 android:background="@drawable/hr_rounded_corner"
                 android:padding="4dp"
                 android:textColor="@android:color/white"
-                android:id="@+id/location_transmission"
-                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/wifi_transmission"
-                android:layout_marginStart="8dp" app:layout_constraintStart_toEndOf="@+id/android_transmission"/>
+                android:id="@+id/label_6"
+                android:onClick="onClick_6"
+                android:clickable="true"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/label_2"
+                android:layout_marginStart="8dp" app:layout_constraintStart_toEndOf="@+id/label_5"/>
         <TextView
                 android:text="TextView"
                 android:layout_width="0dp"
@@ -128,9 +138,11 @@
                 android:background="@drawable/hr_rounded_corner"
                 android:padding="4dp"
                 android:textColor="@android:color/white"
-                android:id="@+id/services_transmission"
-                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/advertising_transmission"
-                android:layout_marginStart="8dp" app:layout_constraintStart_toEndOf="@+id/location_transmission"/>
+                android:id="@+id/label_7"
+                android:onClick="onClick_7"
+                android:clickable="true"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/label_3"
+                android:layout_marginStart="8dp" app:layout_constraintStart_toEndOf="@+id/label_6"/>
         <TextView
                 android:text="TextView"
                 android:layout_width="0dp"
@@ -138,9 +150,11 @@
                 android:background="@drawable/hr_rounded_corner"
                 android:padding="4dp"
                 android:textColor="@android:color/white"
-                android:id="@+id/name_transmission"
-                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/sim_transmission"
-                android:layout_marginStart="8dp" app:layout_constraintStart_toEndOf="@+id/services_transmission"/>
+                android:id="@+id/label_8"
+                android:onClick="onClick_8"
+                android:clickable="true"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/label_4"
+                android:layout_marginStart="8dp" app:layout_constraintStart_toEndOf="@+id/label_7"/>
         <TextView
                 android:text="TextView"
                 android:layout_width="0dp"
@@ -148,9 +162,11 @@
                 android:background="@drawable/hr_rounded_corner"
                 android:padding="4dp"
                 android:textColor="@android:color/white"
-                android:id="@+id/sim_transmission"
+                android:id="@+id/label_4"
+                android:onClick="onClick_4"
+                android:clickable="true"
                 app:layout_constraintTop_toBottomOf="@+id/appDescription"
-                android:layout_marginStart="8dp" app:layout_constraintStart_toEndOf="@+id/advertising_transmission"
+                android:layout_marginStart="8dp" app:layout_constraintStart_toEndOf="@+id/label_3"
                 android:layout_marginTop="8dp"/>
         <ImageView
                 android:layout_width="wrap_content"
@@ -205,6 +221,7 @@
                 android:id="@+id/textView6" android:layout_marginTop="8dp"
                 app:layout_constraintTop_toBottomOf="@+id/imageView4"
                 app:layout_constraintStart_toEndOf="@+id/textView5" android:layout_marginStart="64dp"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
