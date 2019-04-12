@@ -24,10 +24,11 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         lateinit var appClassification: HashMap<App, ca.ucalgary.appcensus.database.App>
+        lateinit var riskClicked: String
 
-
-        fun start(context: Context, classification: HashMap<App, AppDB>){
+        fun start(context: Context, classification: HashMap<App, AppDB>, risk: String){
             appClassification = classification
+            riskClicked = risk
             val intent = Intent(context, MainActivity::class.java)
             context.startActivity(intent)
         }
@@ -38,10 +39,22 @@ class MainActivity : AppCompatActivity() {
         setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        toolbar.title = "Bad Applications"
         toolbar.setTitleTextColor(Color.WHITE)
-        val colorValue = ContextCompat.getColor(this, R.color.colorHigh)
-        toolbar.setBackgroundColor(colorValue)
+        when (riskClicked) {
+            App.HIGH_RISK -> {
+                toolbar.title = "High Risk Applications"
+                toolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.colorHigh))
+            }
+            App.LOW_RISK -> {
+                toolbar.title = "Low Risk Applications"
+                toolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.colorLow))
+            }
+            App.NO_RISK -> {
+                toolbar.title = "Healthy Applications"
+                toolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary))
+            }
+        }
+
         setSupportActionBar(toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setDisplayShowHomeEnabled(true)

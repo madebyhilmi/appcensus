@@ -58,8 +58,10 @@ class OverviewActivity : AppCompatActivity() {
             if (information.isNotEmpty()){
                 //Classify
                 when {
-                    information[0].geo!! or information[0].router_mac!! or information[0].real_name!! -> app.classification = App.HIGH_RISK
-                    information[0].router_ssid!! or information[0].email!! or information[0].hwid!! -> app.classification = App.LOW_RISK
+                    information[0].geo!! or information[0].router_mac!! or information[0].hwid!! or
+                            information[0].real_name!! or information[0].sim_id!! or information[0].aid!! or
+                            information[0].wifi_mac!! or information[0].email!! or information[0].hwid!! -> app.classification = App.HIGH_RISK
+                    information[0].phone!! or information[0].gsfid!! or information[0].aaid!! -> app.classification = App.LOW_RISK
                     else -> app.classification = App.NO_RISK
                 }
                 appClassification[app] = information[0]
@@ -73,16 +75,22 @@ class OverviewActivity : AppCompatActivity() {
 
         val pie = AnyChart.pie()
 
-        pie.setOnClickListener(object : ListenersInterface.OnClickListener(arrayOf("x", "value")) {
-            override fun onClick(event: Event) {
-                MainActivity.start(this@OverviewActivity, appClassification)
+        var highRiskAppCount = 0
+        var lowRiskAppCount = 0
+        var healthyAppCount = 0
+        apps.forEach { app ->
+            when (app.classification){
+                App.HIGH_RISK -> highRiskAppCount++
+                App.LOW_RISK -> lowRiskAppCount++
+                App.NO_RISK -> healthyAppCount++
             }
-        })
+        }
+
 
         val data = ArrayList<DataEntry>()
-        data.add(ValueDataEntry("High Risk", apps.size))
-        data.add(ValueDataEntry("Low Risk", apps.size))
-        data.add(ValueDataEntry("Healthy", apps.size))
+        data.add(ValueDataEntry("High Risk", highRiskAppCount))
+        data.add(ValueDataEntry("Low Risk", lowRiskAppCount))
+        data.add(ValueDataEntry("Healthy", healthyAppCount))
 
 
         pie.data(data)
@@ -97,6 +105,27 @@ class OverviewActivity : AppCompatActivity() {
 
 
         anyChartView.setChart(pie)
+
+
+        pie.setOnClickListener(object : ListenersInterface.OnClickListener(arrayOf("x", "value")) {
+            override fun onClick(event: Event) {
+                val risk_val = event.data["x"]
+                var risk = ""
+                when (risk_val) {
+                    "Healthy" -> risk = App.NO_RISK
+                    "Low Risk" -> risk = App.LOW_RISK
+                    "High Risk" -> risk = App.HIGH_RISK
+                }
+                val it = appClassification.keys.iterator()
+                while(it.hasNext()){
+                    val app = it.next()
+                    if (app.classification != risk){
+                        it.remove()
+                    }
+                }
+                MainActivity.start(this@OverviewActivity, appClassification, risk)
+            }
+        })
     }
 
 }
